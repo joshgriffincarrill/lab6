@@ -371,7 +371,14 @@ library(ggplot2)</code></pre>
 </div>
 <div id="exercise-1" class="section level2">
 <h2>Exercise 1</h2>
-<pre class="r"><code># Do some preliminary investigations &amp; cleaning</code></pre>
+<pre class="r"><code># Do some preliminary investigations &amp; cleaning
+
+diamonds &lt;- diamonds %&gt;%
+  filter(
+    length_mm &gt; 0,
+    width_mm &gt; 0,
+    depth_mm &gt; 0
+  )</code></pre>
 </div>
 <div id="exercise-2" class="section level2">
 <h2>Exercise 2</h2>
@@ -380,7 +387,8 @@ library(ggplot2)</code></pre>
 
 # Overall table_mm arithmetic mean?
 
-
+#diamonds %&gt;%
+ # mean(table_mm, na.rm = TRUE)
 
 
 
